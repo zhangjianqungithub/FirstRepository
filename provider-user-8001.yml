@@ -1,17 +1,17 @@
 server:
-  port: 8000
+  port: 8001
   servlet:
     context-path: /
 spring:
   datasource:
-            #ÒıÈëdruidÊı¾İÔ´
+            #å¼•å…¥druidæ•°æ®æº
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/jtdb?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
     username: root
     password: root
     
-  application:  #¶¨Òå·şÎñÃû³Æ
+  application:  #å®šä¹‰æœåŠ¡åç§°
     name: provider-user  
     
 eureka:
@@ -19,15 +19,15 @@ eureka:
     service-url:
       defaultZone: http://localhost:7000/eureka
   instance:
-    instance-id: provider-user-8000                #¶¨ÒåÎ¢·şÎñµÄÃû³Æ
-    prefer-ip-address: true                        #ÊÇ·ñÏÔÊ¾IPºÍ¶Ë¿Ú
+    instance-id: provider-user-8001                #å®šä¹‰å¾®æœåŠ¡çš„åç§°
+    prefer-ip-address: true                        #æ˜¯å¦æ˜¾ç¤ºIPå’Œç«¯å£
 
-#mybatis: #mybatisÕûºÏ
-mybatis-plus: #mybatis-plusÕûºÏ
-      #±ğÃû°ü
+#mybatis: #mybatisæ•´åˆ
+mybatis-plus: #mybatis-plusæ•´åˆ
+      #åˆ«ååŒ…
   type-aliases-package: com.jt.springcloud.pojo
   mapper-locations: classpath:/mybatis/mappers/*.xml
-      #¿ªÆôÍÕ·åÓ³Éä
+      #å¼€å¯é©¼å³°æ˜ å°„
   configuration:
     map-underscore-to-camel-case: true
 
